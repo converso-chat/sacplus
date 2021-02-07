@@ -1,0 +1,29 @@
+<table class="table table-sm table-borderless table-hover table-responsive-md">
+  <thead>
+    <tr colspan="4">
+      <td class="col-6">
+        <strong><%= category %></p></strong>
+      </td>
+    </tr>
+  </thead>
+  <tbody>
+    <% category_items.each do |item| %>
+      <tr class="d-flex">
+        <td class="col-6">
+          <%= item.name %>
+        </td>
+        <td class="col-4"><%= item.cost.format %></td>
+        <td class="col-1">
+          <%= link_to edit_restaurant_item_path(@restaurant, item) do %>
+            <i class="fa fa-edit"></i>
+          <% end %>
+        </td>
+        <td class="col-1">
+          <%= link_to [@restaurant, item], method: :delete, data: { confirm: 'Are you sure?' } do %>
+            <i class="fa fa-trash-alt"></i>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

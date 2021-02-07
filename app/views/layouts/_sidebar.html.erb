@@ -1,0 +1,53 @@
+<!-- Sidebar -->
+<ul class="navbar-nav bg-gradient-primary sidebar toggled sidebar-dark accordion" id="accordionSidebar">
+  <!-- Sidebar - Brand -->
+  <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/home">
+    <%- if @current_user.super_user? %>
+      <div class="sidebar-brand-icon">
+        <i class="fas fa-tachometer-alt"></i>
+      </div>
+    <% else %>
+      <div class="sidebar-brand-icon rotate-n-15">
+        <i class="fas fa-utensils"></i>
+      </div>
+    <% end %>
+    <div class="sidebar-brand-text mx-3">HOME</div>
+  </a>
+  <!-- Divider -->
+  <hr class="sidebar-divider my-0">
+  <!-- Nav Item - Pages Collapse Menu -->
+  <%= render 'layouts/restaurants' %>
+  <%- if @restaurant.present? && @restaurant.persisted? %>
+    <!-- Divider -->
+    <hr class="sidebar-divider my-0">
+    <!-- Nav Item - Orders -->
+    <%- restaurant_orders_link = restaurant_orders_path(@restaurant) %>
+    <li class="nav-item <%= active_class(restaurant_orders_link) %>">
+      <%= link_to restaurant_orders_link, class: "nav-link" do %>
+        <i class="fas fa-fw fa-biking"></i> Orders
+      <% end %>
+    </li>
+    <!-- Nav Item - Reports -->
+    <%- restaurant_link = restaurant_path(@restaurant) %>
+    <li class="nav-item <%= active_class(restaurant_link) %>">
+      <%= link_to restaurant_link, class: "nav-link" do %>
+        <i class="fas fa-fw fa-chart-line"></i> Reports
+      <% end %>
+    </li>
+    <!-- Nav Item - Items -->
+    <%- restaurant_items_link = restaurant_items_path(@restaurant) %>
+    <li class="nav-item <%= active_class(restaurant_items_link) %>">
+      <%= link_to restaurant_items_link, class: "nav-link" do %>
+        <i class="fas fa-fw fa-cookie-bite"></i> Catalogue
+      <% end %>
+    </li>
+    <!-- Nav Item - Settings -->
+    <%- edit_restaurant_link = edit_restaurant_path(@restaurant) %>
+    <li class="nav-item <%= active_class(edit_restaurant_link) %>">
+      <%= link_to edit_restaurant_link, class: "nav-link" do %>
+        <i class="fas fa-fw fa-cogs"></i> Settings
+      <% end %>
+    </li>
+  <% end %>
+</ul>
+<!-- End of Sidebar -->

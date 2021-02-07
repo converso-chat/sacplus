@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+
+  <title>OrdBot - Sell Via WhatsApp!</title>
+  <meta name="description" content="Whatsapp bot that helps you grow your business" />
+  <meta name="keywords" content="whatsapp twilio sell retail" >
+
+  <!-- Schema.org markup for Google+ -->
+  <meta itemprop="name" content="OrdBot - Sell Via WhatsApp!">
+  <meta itemprop="description" content="Whatsapp bot that helps you grow your business">
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="product">
+  <meta name="twitter:site" content="@tarunvelli">
+  <meta name="twitter:title" content="OrdBot - Sell Via WhatsApp!">
+  <meta name="twitter:description" content="Whatsapp bot that helps you grow your business">
+  <meta name="twitter:creator" content="@tarunvelli">
+  <meta name="twitter:data1" content="0.0">
+  <meta name="twitter:label1" content="Price">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="OrdBot - Sell Via WhatsApp!" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://ordbot.io" />
+  <meta property="og:description" content="Whatsapp bot that helps you grow your business" />
+  <meta property="og:site_name" content="OrdBot" />
+  <meta property="og:price:amount" content="0.0" />
+  <meta property="og:price:currency" content="USD" />
+
+  <!-- Favicons -->
+  <%= favicon_link_tag 'logo.png' %>
+  <!-- <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
+
+  <!-- Third party -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/0f3d4e8f64.js" crossorigin="anonymous" defer></script>
+
+  <!-- Local -->
+  <%= stylesheet_link_tag 'landing-page', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'landing-page', 'data-turbolinks-track': 'reload', defer: "defer"%>
+
+  <!-- =======================================================
+  * Template Name: Vesperr - v2.1.0
+  * Template URL: https://bootstrapmade.com/vesperr-free-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <main id="main">
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top d-flex align-items-center">
+      <div class="container d-flex align-items-center">
+        <div class="logo mr-auto">
+          <h1 class="text-light"><a href="#hero"><%= image_tag 'logo.png' %><span>OrdBot</span></a></h1>
+          <!-- Uncomment below if you prefer to use an image logo -->
+          <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+        </div>
+        <nav class="nav-menu d-none d-lg-block">
+          <ul>
+            <li class="active"><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="/help">Help</a></li>
+            <li><%= link_to "Login", new_user_session_path %></li>
+            <li class="get-started"><%= link_to "Sign Up!", new_user_registration_path %></li>
+          </ul>
+        </nav><!-- .nav-menu -->
+      </div>
+    </header><!-- End Header -->
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="d-flex align-items-center nav_anchor">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
+            <h1>Whatsapp bot that helps you grow your business</h1>
+            <h2>Tailor made for small to medium Restaurants and Retailers</h2>
+            <div>
+              <%= link_to "Get Started!", new_user_registration_path, class: 'btn-get-started scrollto' %>
+            </div>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2 hero-img">
+            <%= video_tag(["ordbot.webm", "ordbot.mp4"], class: "img-fluid hero-video", autoplay: true, loop:true, muted:true, playsinline: true) %>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Hero -->
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about nav_anchor bg-light">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>About</h2>
+        </div>
+
+        <div class="row content">
+          <div class="col-lg-6">
+            <p>
+              With extensive experience in the food and delivery business we have a built a product that we think will
+              enable small to medium establishments grow their business.
+            </p>
+            <p>
+              We believe the current delivery industry is broken because of aggregating apps as they take a large cut from the sale.
+              Also such apps are also not sustainable for small business because their customers can be stolen by big players offering discounts ands promos.
+            </p>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            <p>
+              We are integrating with Twilio for providing programmatic access to WhatsApp.
+              You will first need to set up a Twilio account and register with their WhatsApp API to get started.
+            </p>
+            <a href="https://www.twilio.com/whatsapp" target="_blank" class="btn-learn-more">Learn More</a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Us Section -->
+
+    <!-- ======= Counts Section ======= -->
+    <section id="counts" class="counts bg-light">
+      <div class="container">
+
+        <div class="row">
+          <div class="image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-xl-start">
+            <%= image_tag 'mobile_use.svg', class: "img-fluid"%>
+          </div>
+
+          <div class="col-xl-7 d-flex align-items-stretch pt-4 pt-xl-0">
+            <div class="content d-flex flex-column justify-content-center">
+              <div class="row">
+                <div class="col-md-6 d-md-flex align-items-md-stretch">
+                  <div class="count-box">
+                    <span data-toggle="counter-up">
+                      <i class="fa fa-sign-in-alt" style="color: #3498db;"></i> Signup
+                    </span>
+                    <p>Use your existing gmail account to have a hassle free signup experience</p>
+                  </div>
+                </div>
+
+                <div class="col-md-6 d-md-flex align-items-md-stretch">
+                  <div class="count-box">
+                    <span data-toggle="counter-up">
+                      <i class="fa fa-align-left" style="color: #3498db;"></i> Setup
+                    </span>
+                    <p>Enter your business details</p>
+                  </div>
+                </div>
+
+                <div class="col-md-6 d-md-flex align-items-md-stretch">
+                  <div class="count-box">
+                    <span data-toggle="counter-up">
+                      <i class="fab fa-whatsapp" style="color: #3498db;"></i> Integrate
+                    </span>
+                    <p>Integrate with whatsapp via your Twilio tokens</p>
+                  </div>
+                </div>
+
+                <div class="col-md-6 d-md-flex align-items-md-stretch">
+                  <div class="count-box">
+                    <span data-toggle="counter-up">
+                      <i class="far fa-clock" style="color: #3498db;"></i> 15
+                    </span>
+                    <p><strong>Minutes</strong> to setup and get started</p>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End .content-->
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Counts Section -->
+
+    <!-- ======= Features Section ======= -->
+    <section id="features" class="features nav_anchor">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Features</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-3 col-md-4">
+            <div class="icon-box">
+              <i class="fa fa-store mr-1x" style="color: #ffbb2c;"></i>
+              <h3><a href=""> Custom Catalogues </a></h3>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
+            <div class="icon-box">
+              <i class="fa fa-chart-bar mr-1x" style="color: #5578ff;"></i>
+              <h3><a href=""> Reporting </a></h3>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
+            <div class="icon-box">
+              <i class="fa fa-scroll mr-1x" style="color: #11dbcf;"></i>
+              <h3><a href="">Automted Response</a></h3>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
+            <div class="icon-box">
+              <i class="fa fa-paint-roller mr-1x" style="color: #e361ff;"></i>
+              <h3><a href="">Smooth UI</a></h3>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 mt-4">
+            <div class="icon-box">
+              <i class="fa fa-file-invoice-dollar mr-1x" style="color: #47aeff;"></i>
+              <h3><a href="">Invoice Genration</a></h3>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 mt-4">
+            <div class="icon-box">
+              <i class="fa fa-meteor mr-1x" style="color: #ff5828;"></i>
+              <h3><a href="">Blazing Fast</a></h3>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 mt-4">
+            <div class="icon-box">
+              <i class="fa fa-fingerprint mr-1x" style="color: #e80368;"></i>
+              <h3><a href="">Secure</a></h3>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 mt-4">
+            <div class="icon-box">
+              <i class="fa fa-tag mr-1x" style="color: #4233ff;"></i>
+              <h3><a href="">Order Insights</a></h3>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 mt-4">
+            <div class="icon-box">
+              <i class="fa fa-anchor mr-1x" style="color: #b2904f;"></i>
+              <h3><a href="">Reliable</a></h3>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 mt-4">
+            <div class="icon-box">
+              <i class="fa fa-user-plus mr-1x" style="color: #b20969;"></i>
+              <h3><a href="">Multi User</a></h3>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 mt-4">
+            <div class="icon-box">
+              <i class="fa fa-mobile-alt mr-1x" style="color: #ffa76e;"></i>
+              <h3><a href="">Responsive</a></h3>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 mt-4">
+            <div class="icon-box">
+              <i class="fab fa-whatsapp mr-1x" style="color: #29cc61;"></i>
+              <h3><a href="">Familiar</a></h3>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Features Section -->
+
+    <!-- ======= F.A.Q Section ======= -->
+    <section id="faq" class="faq nav_anchor bg-light">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Frequently Asked Questions</h2>
+        </div>
+
+        <div class="row faq-item d-flex align-items-stretch">
+          <div class="col-lg-5">
+            <h4><i class="far fa-question-circle" style="color: #3498db;"></i> How much effort would it take to migrate an existing catalogue?</h4>
+          </div>
+          <div class="col-lg-7">
+            <p>
+              You can upload a single spreedsheet with all the detail for quick and easy catalogue creation.
+            </p>
+          </div>
+        </div><!-- End F.A.Q Item-->
+
+        <div class="row faq-item d-flex align-items-stretch">
+          <div class="col-lg-5">
+            <h4><i class="far fa-question-circle" style="color: #3498db;"></i> Can it be self-hosted?</h4>
+          </div>
+          <div class="col-lg-7">
+            <p>
+              This is an open source product, anyone can download the code and host it themselves.
+            </p>
+          </div>
+        </div><!-- End F.A.Q Item-->
+
+        <div class="row faq-item d-flex align-items-stretch">
+          <div class="col-lg-5">
+            <h4><i class="far fa-question-circle" style="color: #3498db;"></i> What is the cost?</h4>
+          </div>
+          <div class="col-lg-7">
+            <p>
+              Currently we're still in alpha phase, you can try out the product for free.
+            </p>
+          </div>
+        </div><!-- End F.A.Q Item-->
+
+        <div class="row faq-item d-flex align-items-stretch">
+          <div class="col-lg-5">
+            <h4><i class="far fa-question-circle" style="color: #3498db;"></i> Can there be multiple users handling one store?</h4>
+          </div>
+          <div class="col-lg-7">
+            <p>
+              Multi user access is now available!
+            </p>
+          </div>
+        </div><!-- End F.A.Q Item-->
+
+        <div class="row faq-item d-flex align-items-stretch">
+          <div class="col-lg-5">
+            <h4><i class="far fa-question-circle" style="color: #3498db;"></i> How is this better than directly taking orders on WhatsApp?</h4>
+          </div>
+          <div class="col-lg-7">
+            <p>
+              The value add here is that the orders will be tracked and replies will be sent automatically when the order is updated.
+              Also this can be used by other employess/users throughout different shifts, so you dont have to constantly check your notifications.
+            </p>
+          </div>
+        </div><!-- End F.A.Q Item-->
+
+      </div>
+    </section><!-- End F.A.Q Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact nav_anchor">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Contact Us</h2>
+        </div>
+
+        <div class="row d-flex justify-content-center">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="contact-about">
+              <h3>Get in touch</h3>
+              <p>Have any questions, doubts or queries? Get in touch for anything from basic questions to detailed demos.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mt-4 mt-md-0">
+            <div class="info">
+              <div>
+                <i class="ri-map-pin-line"></i>
+                <p>Based in Hyderabad <i class="fa fa-heart" style="color: #3498db;"></i></p>
+              </div>
+
+              <div>
+                <i class="ri-mail-send-line"></i>
+                <p>whatsapporderbot@gmail.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="row d-flex align-items-center">
+        <div class="col-lg-6 text-lg-left text-center">
+          <div class="credits">
+            <!-- All the links in the footer should remain intact. -->
+            <!-- You can delete the links only if you purchased the pro version. -->
+            <!-- Licensing information: https://bootstrapmade.com/license/ -->
+            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/vesperr-free-bootstrap-template/ -->
+            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <nav class="footer-links text-lg-right text-center pt-2 pt-lg-0">
+            <a href="/" class="scrollto">Home</a>
+            <a href="/help" class="scrollto">Help</a>
+            <a href="https://github.com/tarunvelli/ordbot" target="_blank" >Github</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top">
+    <span>
+      <i class="fa fa-caret-square-up fa-3x"></i>
+    </span>
+  </a>
+
+  <%= javascript_pack_tag 'landing-page' %>
+</body>
+</html>
