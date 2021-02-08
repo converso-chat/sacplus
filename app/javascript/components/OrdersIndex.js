@@ -87,14 +87,14 @@ class OrdersIndex extends React.Component {
                   })
                 }
                 <p className="small text-gray-600">
-                  <span>Address : {order.address}</span><br/>
-                  <span>Note : {order.note}</span>
+                  <span>Endereço : {order.address}</span><br/>
+                  <span>Obs. : {order.note}</span>
                 </p>
-                <h6>Cost : {order.display_cost}</h6>
+                <h6>Valor : {order.display_cost}</h6>
                 <p className="small text-gray-600">
-                  <span>Order Id : {order.id}</span><br/>
-                  <span>Time : {timeOfOrder.toLocaleTimeString()}</span><br/>
-                  <span>Date : {timeOfOrder.toLocaleDateString()}</span>
+                  <span>ID do Pedido : {order.id}</span><br/>
+                  <span>Hora : {timeOfOrder.toLocaleTimeString()}</span><br/>
+                  <span>Data : {timeOfOrder.toLocaleDateString()}</span>
                 </p>
               </div>
             </div>
@@ -138,20 +138,20 @@ class OrdersIndex extends React.Component {
             <>
               <div className="row d-flex justify-content-center">
                 <div className="spinner-border" role="status">
-                  <span className="sr-only">Loading...</span>
+                  <span className="sr-only">Carregando...</span>
                 </div>
               </div>
               <div className="row d-flex justify-content-center">
-                Connecting...
+                Conectando...
               </div>
             </>
           :
             <DragDropContext onDragEnd={this.onDragEnd}>
               <div className="row">
-                {this.ordersColumn("Received")}
-                {this.ordersColumn("Preparing")}
-                {this.ordersColumn("Delivering")}
-                {this.ordersColumn("Delivered")}
+                {this.ordersColumn("Recebido")}
+                {this.ordersColumn("Preparando")}
+                {this.ordersColumn("A Caminho")}
+                {this.ordersColumn("Entregue")}
               </div>
             </DragDropContext>
         }

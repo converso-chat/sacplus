@@ -21,7 +21,7 @@ const OrderReceivedNotice = (props) => {
             </span>
             <br/>
             <br/>
-            <a className='btn btn-primary' href={`https://api.whatsapp.com/send?phone=${phone}&text=${text}`} > Confirm </a>
+            <a className='btn btn-primary' href={`https://api.whatsapp.com/send?phone=${phone}&text=${text}`} > Confirmar </a>
           </div>
         </div>
       </div>
