@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  default_url_options :host => "ordbot.io"
+  default_url_options :host => "sacplus.com.br"
 
   root :to => "landingpage#index"
 
