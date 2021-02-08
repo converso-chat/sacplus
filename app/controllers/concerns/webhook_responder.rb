@@ -28,7 +28,7 @@ module WebhookResponder
 
     order.update(state: 'received')
     twiml = Twilio::TwiML::MessagingResponse.new do |r|
-      r.message(body: "Order ##{order.id} has been confirmed. Waiting for restaurant to accept order.")
+      r.message(body: "Pedido ##{order.id} foi confirmado. Em instantes você receberá uma notificação de Status.")
     end
 
     twiml.to_s
@@ -38,7 +38,7 @@ module WebhookResponder
     from = params['From'].gsub('whatsapp:', '')
     url = restaurant_menu_url(@restaurant, u: from.encrypt)
     twiml = Twilio::TwiML::MessagingResponse.new do |r|
-      r.message(body: "Please use the following the link to place your order #{url}")
+      r.message(body: "Use o seguinte link para fazer seu pedido #{url}")
     end
 
     twiml.to_s
@@ -50,7 +50,7 @@ module WebhookResponder
 
     order = Order.create(from: from, note: note, state: 'received', restaurant: @restaurant)
     twiml = Twilio::TwiML::MessagingResponse.new do |r|
-      r.message(body: "Order ID: #{order.id} received. Waiting for restaurant to accept order.")
+      r.message(body: "Seu pedido ID: #{order.id} foi recebido. Você receberá uma notificação de status em insantes.")
     end
 
     twiml.to_s

@@ -7,17 +7,17 @@ module SendMessage
     'preparing' => lambda do |previous_state, id|
       return unless previous_state == 'received'
 
-      "Order ##{id} has been accepted and is being prepared!"
+      "Olá! Seu pedido ##{id} foi aprovado e está sendo preparado!"
     end,
     'delivering' => lambda do |previous_state, id|
       return unless Order::PRE_DELIVERY_STATES.include?(previous_state)
 
-      "Order ##{id} is out for delivery!"
+      "Obaaa!!! Seu pedido ##{id} foi enviado!"
     end,
     'delivered' => lambda do |previous_state, id|
       return unless Order::PRE_DELIVERED_STATES.include?(previous_state)
 
-      "Order ##{id} has been delivered, please enjoy your food!"
+      "Obrigado!!! Seu pedido ##{id} foi entregue. Aguardamos seu retorno!"
     end
   }.freeze
 
@@ -29,7 +29,7 @@ module SendMessage
   end
 
   def send_confirmation_request
-    message = "To confirm your order please reply 'confirm ##{id}'\n\n"
+    message = "Para confirmar seu pedido responda 'confirmar ##{id}'\n\n"
     message += "Your order details are:\n"
     order_items_details.each do |order_item|
       message += "#{order_item[:name]} x #{order_item[:quantity]}\n"
