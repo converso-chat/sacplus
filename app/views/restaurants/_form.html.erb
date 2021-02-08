@@ -1,4 +1,4 @@
-<p class="mb-4">Para saber como configurar uma conta de teste do Twilio e sandbox do Twillio, acesse <a target="_blank" href="/help/setup_twilio_sandbox">help page</a>.</p>
+<p class="mb-4">Para saber como configurar uma conta de teste do Twilio e sandbox do Twillio, acesse: <a target="_blank" href="/help/setup_twilio_sandbox"> Ajuda com Twilio</a>.</p>
 <div class="row">
   <div class="col-lg-6">
     <%= form_with(model: restaurant, local: true) do |form| %>
@@ -13,7 +13,7 @@
         </div>
       <% end %>
       <div class="form-group mb-2">
-        <%= form.label :name %>
+        <%= form.label :nome %>
         <%= form.text_field :name, class: 'form-control form-control-sm' %>
       </div>
       <div class="form-group mb-2">
@@ -21,11 +21,11 @@
         <%= form.text_field :phone_number, class: 'form-control form-control-sm' %>
       </div>
       <div class="form-group mb-2">
-        <%= form.label :address %>
+        <%= form.label :endereço %>
         <%= form.text_area :address, class: 'form-control form-control-sm' %>
       </div>
       <div class="form-group mb-2">
-        <%= form.label :currency %>
+        <%= form.label :moeda %>
         <%= form.select :currency, all_currencies, { include_blank: 'Select Currency' }, class: "form-control", required: true %>
       </div>
       <div class="form-group mb-2">
