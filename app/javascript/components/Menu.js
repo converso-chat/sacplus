@@ -91,7 +91,7 @@ class OrdersIndex extends React.Component {
     })
     contents.push(
       <tr key={`cart-item-total`}>
-        <td scope="row"> Total Cost </td>
+        <td scope="row"> Valor Total </td>
         <th> { this.props.currency_symbol }{ total } </th>
       </tr>
     )
@@ -125,7 +125,7 @@ class OrdersIndex extends React.Component {
                 </tbody>
               </table>
               <div className="form-group">
-                <label htmlFor="order-from" className="col-form-label">Número:</label>
+                <label htmlFor="order-from" className="col-form-label">WhatsApp:</label>
                 {
                   this.props.from ?
                     <input type="password" className="form-control form-control-sm" id="order-from" value={this.state.from} disabled/>
@@ -134,7 +134,7 @@ class OrdersIndex extends React.Component {
                 }
               </div>
               <div className="form-group">
-                <label htmlFor="order-address" className="col-form-label">Address:</label>
+                <label htmlFor="order-address" className="col-form-label">Endereço de Entrega:</label>
                 <textarea className="form-control form-control-sm" id="order-address" onChange={ this.updateAddress }/>
               </div>
               <div className="form-group">
