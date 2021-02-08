@@ -11,13 +11,13 @@ const OrderReceivedNotice = (props) => {
       <div className="modal-dialog modal-dialog-centered" role="document">
         <div className="modal-content">
           <div className="modal-header">
-            <h5 className="modal-title" id="orderReceivedModalLabel">Order Received!</h5>
+            <h5 className="modal-title" id="orderReceivedModalLabel">Pedido Recebido!</h5>
           </div>
           <div className="modal-body">
-            <h1> Your order number is #{ props.orderId }</h1>
+            <h1> O código do seu pedido é #{ props.orderId }</h1>
             <span>
-              Confirm your order via whatsapp by sending `confirm #{props.orderId}` to {props.phoneNumber} <br/>
-              or by clicking the following button
+              Confirme seu pedido pelo WhatsApp enviando `confirmar #{props.orderId}` para {props.phoneNumber} <br/>
+              ou clique no botão para confirmar
             </span>
             <br/>
             <br/>
