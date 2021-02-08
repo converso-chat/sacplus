@@ -142,13 +142,13 @@ class OrdersIndex extends React.Component {
                 </div>
               </div>
               <div className="row d-flex justify-content-center">
-                Connecting...
+                Conectando...
               </div>
             </>
           :
             <DragDropContext onDragEnd={this.onDragEnd}>
               <div className="row">
-                {this.ordersColumn("Received")}
+                {this.ordersColumn("Recebido")}
                 {this.ordersColumn("Preparing")}
                 {this.ordersColumn("Delivering")}
                 {this.ordersColumn("Delivered")}
