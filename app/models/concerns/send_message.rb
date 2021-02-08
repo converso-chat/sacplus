@@ -30,11 +30,11 @@ module SendMessage
 
   def send_confirmation_request
     message = "Para confirmar seu pedido responda 'confirmar ##{id}'\n\n"
-    message += "Your order details are:\n"
+    message += "Confira os detalhes do seu pedido:\n"
     order_items_details.each do |order_item|
       message += "#{order_item[:name]} x #{order_item[:quantity]}\n"
     end
-    message += "Cost : #{cost.format}"
+    message += "*Valor Total* : #{cost.format}"
 
     send_message(message)
   end
