@@ -4,16 +4,16 @@
   <div class="card-body">
     <ul class="nav nav-tabs" id="myTab" role="tablist">
       <li class="nav-item" role="presentation">
-        <a class="nav-link active" id="add-item-tab" data-toggle="tab" href="#add-item" role="tab" aria-controls="add-item" aria-selected="false">Add Item</a>
+        <a class="nav-link active" id="add-item-tab" data-toggle="tab" href="#add-item" role="tab" aria-controls="add-item" aria-selected="false">Cadastro de Produtos</a>
       </li>
       <li class="nav-item" role="presentation">
-        <a class="nav-link" id="bulk-add-items-tab" data-toggle="tab" href="#bulk-add-items" role="tab" aria-controls="bulk-add-items" aria-selected="false">Bulk Add Items</a>
+        <a class="nav-link" id="bulk-add-items-tab" data-toggle="tab" href="#bulk-add-items" role="tab" aria-controls="bulk-add-items" aria-selected="false">Importar Produtos em Massa</a>
       </li>
     </ul>
     <div class="tab-content" id="myTabContent">
         <br/>
         <%= link_to restaurant_items_path do %>
-          <i class="fa fa-arrow-circle-left"></i> Back
+          <i class="fa fa-arrow-circle-left"></i> Voltar
         <% end %>
       <div class="tab-pane show active" id="add-item" role="tabpanel" aria-labelledby="add-item-tab">
         <%= render 'form', restaurant: @restaurant, item: @item %>
