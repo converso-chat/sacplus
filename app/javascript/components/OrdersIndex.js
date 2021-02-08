@@ -87,7 +87,7 @@ class OrdersIndex extends React.Component {
                   })
                 }
                 <p className="small text-gray-600">
-                  <span>Address : {order.address}</span><br/>
+                  <span>Endereço : {order.address}</span><br/>
                   <span>Note : {order.note}</span>
                 </p>
                 <h6>Cost : {order.display_cost}</h6>
