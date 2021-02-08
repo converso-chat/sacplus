@@ -101,9 +101,9 @@ class OrdersIndex extends React.Component {
 
   submitButton = () => {
     if (this.state.from && this.state.address && this.cartCount()) {
-      return <button type="button" id="submit-order-button" className="btn btn-outline-orange" onClick={ this.createOrder }>Place Order</button>
+      return <button type="button" id="submit-order-button" className="btn btn-outline-orange" onClick={ this.createOrder }>Finalizar Pedio</button>
     } else {
-      return <button type="button" id="submit-order-button" className="btn btn-outline-orange" disabled >Place Order</button>
+      return <button type="button" id="submit-order-button" className="btn btn-outline-orange" disabled >Finalizar Pedio</button>
     }
   }
 
@@ -125,7 +125,7 @@ class OrdersIndex extends React.Component {
                 </tbody>
               </table>
               <div className="form-group">
-                <label htmlFor="order-from" className="col-form-label">Number:</label>
+                <label htmlFor="order-from" className="col-form-label">Número:</label>
                 {
                   this.props.from ?
                     <input type="password" className="form-control form-control-sm" id="order-from" value={this.state.from} disabled/>
@@ -138,12 +138,12 @@ class OrdersIndex extends React.Component {
                 <textarea className="form-control form-control-sm" id="order-address" onChange={ this.updateAddress }/>
               </div>
               <div className="form-group">
-                <label htmlFor="order-note" className="col-form-label">Note:</label>
+                <label htmlFor="order-note" className="col-form-label">Observações:</label>
                 <textarea className="form-control form-control-sm" id="order-note" onChange={ this.updateNote }/>
               </div>
             </div>
             <div className="modal-footer">
-              <button type="button" className="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+              <button type="button" className="btn btn-outline-secondary" data-dismiss="modal">Fechar</button>
               { this.submitButton() }
             </div>
           </div>
