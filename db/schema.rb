@@ -58,7 +58,7 @@ ActiveRecord::Schema.define(version: 2020_09_05_175783) do
     t.string "encrypted_auth_token"
     t.string "encrypted_auth_token_iv"
     t.text "phone_number"
-    t.string "currency", default: "USD"
+    t.string "currency", default: "BRL"
     t.index ["encrypted_account_sid_iv"], name: "index_restaurants_on_encrypted_account_sid_iv", unique: true
     t.index ["encrypted_auth_token_iv"], name: "index_restaurants_on_encrypted_auth_token_iv", unique: true
   end
