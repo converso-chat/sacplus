@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 2020_09_05_175783) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "cost_cents", default: 0, null: false
-    t.string "cost_currency", default: "USD", null: false
+    t.string "cost_currency", default: "BRL", null: false
     t.index ["restaurant_id"], name: "index_items_on_restaurant_id"
   end
 
@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 2020_09_05_175783) do
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "restaurant_id", null: false
     t.integer "cost_cents", default: 0, null: false
-    t.string "cost_currency", default: "USD", null: false
+    t.string "cost_currency", default: "BRL", null: false
     t.index ["restaurant_id"], name: "index_orders_on_restaurant_id"
   end
 
