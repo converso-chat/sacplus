@@ -1,7 +1,7 @@
 development:
   adapter: postgresql
   encoding: utf8
-  database: whatsapp-restaurant-bot
+  database: whatsapp-restaurant-bot-development
   pool: 5
   username:
   password:
