@@ -3,8 +3,8 @@ development:
   encoding: utf8
   database: whatsapp-restaurant-bot-development
   pool: 5
-  username:
-  password:
+  username: sacplus
+  password: 1q2w3e4r5t
 
 test: &TEST
   adapter: postgresql
