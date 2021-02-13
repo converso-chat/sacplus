@@ -65,6 +65,6 @@ Rails.application.configure do
 
   # Devise setup
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
-  config.hosts << "https://www.sacplus.com.br"
+  config.hosts << "www.sacplus.com.br"
   #config.hosts << /[a-z0-9]+\.ngrok\.io/
 end
