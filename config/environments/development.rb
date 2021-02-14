@@ -64,7 +64,7 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
   # Devise setup
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
-  config.hosts << "www.sacplus.com.br"
+  config.action_mailer.default_url_options = { host: 'localhost', port: 4000 }
+  config.hosts << "www.wppdelivery.com.br"
   #config.hosts << /[a-z0-9]+\.ngrok\.io/
 end
