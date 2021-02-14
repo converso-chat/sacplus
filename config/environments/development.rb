@@ -63,6 +63,8 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
+  config.action_cable.allowed_request_origins = [%r{https?://\S+}]
+
   # Devise setup
   config.action_mailer.default_url_options = { host: 'localhost', port: 4000 }
   config.hosts << "www.wppdelivery.com.br"
