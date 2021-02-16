@@ -64,9 +64,9 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "whatsapp_restaurant_bot_production"
 
   config.action_mailer.perform_caching = false
-  config.action_mailer.default_url_options = { host: 'ordbot.io' }
+  config.action_mailer.default_url_options = { host: 'sacplus.com.br' }
   config.action_mailer.perform_deliveries = true
-  config.action_mailer.default_options = {from: 'whatsapporderbot@gmail.com'}
+  config.action_mailer.default_options = {from: 'sa@sacplus.com.br'}
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
