@@ -127,7 +127,6 @@ Rails.application.configure do
     # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
     
     # Devise setup
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   config.hosts << "www.sacplus.com.br"
   end
   
